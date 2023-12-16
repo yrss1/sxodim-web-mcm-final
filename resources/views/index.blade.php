@@ -17,8 +17,8 @@
 </head>
 <body>
 <div class="container">
-    <div class="navbar">
-        <div class="navbar-left">
+    <div class="header">
+        <div class="header-left">
             <div>
                 <a>
                     <img src="icons/icon.png" alt="icon" class="icon">
@@ -26,7 +26,7 @@
             </div>
             <div><p>Алматы</p></div>
         </div>
-        <div class="navbar-right">
+        <div class="header-right">
             <div><p>Русский</p></div>
             <div class="impression-icon favorites-icon">
                 <a href="#"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -43,6 +43,151 @@
                         <use xlink:href="#account"></use>
                     </svg></a>
             </div>
+        </div>
+    </div>
+    <div class="nav">
+        <div>
+            <a href="#">
+                <div class="impression-icon ">
+                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="#ticket"></use>
+                    </svg>
+                </div>
+                <span>Билеты</span>
+            </a>
+        </div>
+        <div>
+            <a href="#">
+                <div class="impression-icon ">
+                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="#event"></use>
+                    </svg>
+                </div>
+                <span>Афиша</span>
+            </a>
+        </div>
+        <div>
+            <a href="#">
+                <div class="impression-icon ">
+                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="#certificates"></use>
+                    </svg>
+                </div>
+                <span>Сертификаты</span>
+            </a>
+        </div>
+        <div>
+            <a href="#">
+                <div class="impression-icon ">
+                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="#newspaper"></use>
+                    </svg>
+                </div>
+                <span>Журнал</span>
+            </a>
+        </div>
+        <div>
+            <a href="#">
+                <div class="impression-icon ">
+                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="#location"></use>
+                    </svg>
+                </div>
+                <span>Места</span>
+            </a>
+        </div>
+    </div>
+    <div class="contents"></div>
+    @yield('content')
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-content-left">
+                <div class="footer-content-left-top">
+                    <div>
+                        <a>
+                            <img src="icons/icon.png" alt="icon" class="logo">
+                        </a>
+                    </div>
+                    <div class="about-project">
+                        <div class="about-project-title">
+                            О «Давай Сходим»
+                        </div>
+                        <div class="about-project-links">
+                            <a href="https://sxodim.com/almaty/about">О проекте</a>
+                            <a href="https://sxodim.com/almaty/contacts">Контакты</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-content-left-center">
+                        <a href="https://vk.com/sxodim" target="_blank">
+                            <div class="impression-icon ">
+                                <svg width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+                                    <use xlink:href="#vk-icon"></use>
+                                </svg>
+                            </div>
+                        </a>
+                        <a href="https://www.instagram.com/sxodim/" target="_blank">
+                            <div class="impression-icon ">
+                                <svg width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+                                    <use xlink:href="#instagram-icon"></use>
+                                </svg>
+                            </div>
+                        </a>
+                        <a href="https://telegram.me/sxodim" target="_blank">
+                            <div class="impression-icon ">
+                                <svg width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+                                    <use xlink:href="#telegram-icon"></use>
+                                </svg>
+                            </div>
+                        </a>
+                        <a href="https://twitter.com/sxodim" target="_blank">
+                            <div class="impression-icon ">
+                                <svg width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+                                    <use xlink:href="#twitter-icon"></use>
+                                </svg>
+                            </div>
+                        </a>
+
+                        <a href="https://www.facebook.com/sxodim" target="_blank">
+                            <div class="impression-icon ">
+                                <svg width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+                                    <use xlink:href="#facebook-icon"></use>
+                                </svg>
+                            </div>
+                        </a>
+                </div>
+                <div class="footer-content-left-bottom">
+                    <div class="agreements">
+                        <a href="https://sxodim.com/booking_rules"> Правила использования и возврата</a>
+                        <a href="https://sxodim.com/polzovatelskoe-soglashenie">Пользовательское соглашение</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-content-right">
+                <div class="email-subscribe-title">Рассылка</div>
+                <div class="email-subscribe-text">
+                    Отбираем главные события недели, а&nbsp;потом интересно рассказываем о них в нашей рассылке.
+                </div>
+                <form class="email-subscribe-form subscribe_form" id="subscribe_form" action="/api/subscribe">
+                    <input type="hidden" name="_token" value="8rUQ9axuZeYro6txVlLasLt3fv3JVqPvMROCX1ut">                <input type="hidden" name="city_id" value="1">
+                    <div class="impression-input impression-input-with-icon">
+                        <label for="email-input">
+                            <div class="impression-icon ">
+                                <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                                    <use xlink:href="#envelope-icon"></use>
+                                </svg>
+                            </div>
+                        </label>
+                        <input type="text" id="email-input" name="email" placeholder="Электронная почта">
+                    </div>
+                    <button class="button button-primary" type="submit">Подписаться</button>
+
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © Давай Сходим, 2023
         </div>
     </div>
 </div>

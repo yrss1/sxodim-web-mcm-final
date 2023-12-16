@@ -5,25 +5,131 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+a {
+    text-decoration: none;
+}
+a:active {
+    color: inherit;
+}
 
-.navbar {
+.header {
     display: flex;
     justify-content: space-between;
     margin-top: 5px;
 }
-.navbar-left, .navbar-right {
+.header-left, .header-right {
     display: flex;
     align-items: center;
 }
-.navbar-right div{
+.header-right div{
     margin-right: 10px;
 }
 .icon {
     width: 120px;
 }
 .container {
-    margin: 0 100px 0 100px;
+    margin: 0 150px 0 150px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.contents {
+    flex: 1;
 }
 .impression-icon a:hover svg {
     fill: red; /* Измените цвет fill на желаемый цвет при наведении */
+}
+.nav {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    background: #f2f3f3;
+    padding: 20px;
+}
+.nav div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+    font-size: 16px;
+}
+.nav a:hover {
+    color: red;
+}
+.footer {
+    text-align: center;
+}
+.footer-content {
+    display: flex;
+    background: #f2f2f2;
+    justify-content: center;
+    padding: 40px;
+}
+.footer-bottom {
+    background: #e5e5e5;
+    font-size: 12px;
+    color: rgba(0,0,0,.48);
+    padding: 16px;
+}
+.footer-content-left-top{
+    display: flex;
+    align-items: center;
+}
+.logo {
+    width: 200px;
+    margin-left: -30px;
+}
+.about-project {
+    margin-left: 60px;
+}
+.about-project-title, .email-subscribe-title{
+    font-weight: 700;
+}
+.about-project-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.about-project-links a {
+    color: rgba(0,0,0,.48);
+    padding: 10px;
+}
+.footer-content-left-center {
+    display: flex;
+}
+.footer-content-left-center svg {
+    fill: #bb483d;
+    margin-left: 10px;
+}
+.footer-content-left-bottom a {
+    color:rgba(0,0,0,.48);
+    margin-left: 20px;
+}
+.footer-content-right {
+    text-align: left;
+
+}
+.email-subscribe-text {
+    color:rgba(0,0,0,.48)
+}
+.impression-input-search, .impression-input-with-icon {
+    align-items: center;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0 12px;
+    background: #fff;
+}
+.impression-input input{
+    border: none;
+    padding: 15px;
 }
