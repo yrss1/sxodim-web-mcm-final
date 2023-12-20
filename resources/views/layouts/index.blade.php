@@ -13,6 +13,7 @@
         href="https://fonts.googleapis.com/css?family=Poppins"
         rel="stylesheet"
     />
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <title>E-bus</title>
 </head>
 <body>
@@ -20,8 +21,8 @@
     <div class="header">
         <div class="header-left">
             <div>
-                <a>
-                    <img src="icons/icon.png" alt="icon" class="icon">
+                <a href="{{ route('event.index') }}">
+                    <img src="/icons/icon.png" alt="icon" class="icon">
                 </a>
             </div>
             <div><p>Алматы</p></div>
@@ -39,10 +40,16 @@
                     </svg></a>
             </div>
             <div class="impression-icon user-icon">
-                <a href="#"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <a href="{{ route('cabinet') }}"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <use xlink:href="#account"></use>
                     </svg></a>
+
             </div>
+            @if(auth()->check())
+                <div class="cabinet-top">
+                    <a href="{{ route('logout') }}">Выйти из аккаунта</a>
+                </div>
+            @endif
         </div>
     </div>
     <div class="nav">
@@ -67,7 +74,7 @@
             </a>
         </div>
         <div>
-            <a href="#">
+            <a href="{{ route('cert.index') }}">
                 <div class="impression-icon ">
                     <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
                         <use xlink:href="#certificates"></use>
@@ -97,15 +104,16 @@
             </a>
         </div>
     </div>
-    <div class="contents"></div>
-    @yield('content')
+    <div class="contents">
+        @yield('content')
+    </div>
     <div class="footer">
         <div class="footer-content">
             <div class="footer-content-left">
                 <div class="footer-content-left-top">
                     <div>
                         <a>
-                            <img src="icons/icon.png" alt="icon" class="logo">
+                            <img src="/icons/icon.png" alt="icon" class="logo">
                         </a>
                     </div>
                     <div class="about-project">
